@@ -1,0 +1,7 @@
+編譯步驟：
+1.flex trylex.l → flex會產生 lex.yy.c檔（將trylex.l的規則翻譯成C程式碼格式的函數yylex()，並輸出到lex.yy.c檔中，則User subroutines複製到此檔的最後面）
+2.gcc lex.yy.c → 用gcc編譯，產生a.exe
+3.a.exe → 可執行
+
+開始執行後請輸入文字，輸入完後按下Enter。
+就會幫你判斷輸入的文字為關鍵字、id、數字、unary或將未定義的（可能一些問號、驚嘆號等等）直接ECHO（直接列印出來）。

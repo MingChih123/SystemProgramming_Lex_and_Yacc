@@ -1,0 +1,7 @@
+bison -d y.y
+flex l.l
+g++ -c y.tab.c
+g++ -c lex.yy.c
+g++ -c main.cpp
+g++ main.o lex.yy.o y.tab.o -o main
+.\main
