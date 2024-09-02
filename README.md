@@ -3,14 +3,17 @@
 學號：1102924  
 主題：Lex and Yacc 
 [詳細說明](https://github.com/MingChih123/SystemProgramming_Lex_and_Yacc/blob/main/Lex_and_Yacc%E4%BB%8B%E7%B4%B9.pdf)  
-# Lex and Yacc - 簡易計算機
-## 整體流程、編譯流程
+## 摘要
+本專案主要介紹Lex 與Yacc架構、編譯流程的來由，並實作出簡易的計算機。
+## 介紹
+### Lex and Yacc - 簡易計算機
+#### 整體流程、編譯流程
 - 整體流程
 ![image](https://github.com/user-attachments/assets/22209a22-5e97-49f7-90b2-957a69b57a4c)  
 - 編譯流程
 ![image](https://github.com/user-attachments/assets/4320e72b-acf1-4add-9a0a-d348ea3e5281)  
 
-## Lex（.l檔） 
+#### Lex（.l檔） 
 - 主要架構：規則定義Token型式  
 
 ![image](https://github.com/user-attachments/assets/da4acc41-f20e-4de0-a027-76584b9c083e)  
@@ -24,7 +27,7 @@
   - yywrap()：用來判斷還有沒有文件要讀取  
 
 ![image](https://github.com/user-attachments/assets/24a16188-0c61-4a88-9d07-ccfbb730bb16)  
-## Yacc（.y檔） 
+#### Yacc（.y檔） 
 - 主要架構：規則定義Grammar型式（先定義有甚麼Token，Lex才有辦法判斷）  
 
 ![image](https://github.com/user-attachments/assets/da4acc41-f20e-4de0-a027-76584b9c083e)  
@@ -46,11 +49,11 @@
   - yyerror()：yacc的錯誤處理   
 
 ![image](https://github.com/user-attachments/assets/e4b0051c-8b92-4529-9d4a-ac2c1391a689)  
-## 主程式（mian.cpp）
+### 主程式（mian.cpp）
 ![image](https://github.com/user-attachments/assets/dce80616-b9ec-44a4-88a3-74ceb5abe2c1)  
 - file.txt：輸入算式，例如：
   - (1+2+3)*20-(-15)=
-## 編譯指令
+#### 編譯指令
 ```bash
 bison -d y.y  
 flex l.l  
